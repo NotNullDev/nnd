@@ -5,6 +5,7 @@ type ProjectPreviewType = {
   author: string;
   description: string;
   tags: string[];
+  slug: string;
 };
 export default function ProjectPreview({
   description,
@@ -13,15 +14,22 @@ export default function ProjectPreview({
   projectName,
   tags,
   author,
+  slug,
 }: ProjectPreviewType) {
   return (
-    <div className="p-4 shadow-xl gap-2 flex flex-col hover:scale-110 transition-all">
-      <h2 className="text-xl font-bold">{projectName}</h2>
+    <a
+      className="
+      p-4 shadow-xl gap-2 flex flex-col hover:scale-110 transition-all
+       max-w-[400px]
+      "
+      href={`/projects/${slug}`}
+    >
+      <h2 className="text-xl font-extrabold">{projectName}</h2>
       <div className="flex justify-between w-full">
         <div className="text-sm">{projectDate.toString()}</div>
         <div className="text-sm">{minutesToRead}</div>
       </div>
-      <div className="whitespace-pre-wrap mx-auto line-clamp-5">
+      <div className="whitespace-pre-wrap mx-auto line-clamp-5 my-2">
         {description}
       </div>
       <div className="flex gap-1 justify-end">
@@ -33,6 +41,6 @@ export default function ProjectPreview({
           );
         })}
       </div>
-    </div>
+    </a>
   );
 }
