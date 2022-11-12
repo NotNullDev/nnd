@@ -15,4 +15,6 @@ export default defineConfig({
     rehypePlugins: [remarkReadingTime],
     extendDefaultPlugins: true,
   },
+  site: "https://notnulldev.github.io",
+  base: "/nnd",
 });
