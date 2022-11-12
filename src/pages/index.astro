@@ -1,0 +1,38 @@
+---
+import ProjectPreview from "../components/projectPreview";
+import UserInfo from "../components/searchInfo";
+import UserData from "../components/searchInput";
+import Layout from "../layouts/Layout.astro";
+
+const handleChange = () => {
+  console.log("hi!");
+};
+
+const projects = await Astro.glob("../pages/projects/*.md");
+---
+
+<Layout title="NotNullDev.com">
+  <main class="flex flex-col flex-1 items-center">
+    <section class="max-w-lg flex flex-col flex-1">
+      <UserData client:load />
+      <UserInfo client:load />
+      {
+        projects.map((p) => {
+          console.log(p.rawContent());
+          console.log(p.compiledContent());
+          console.log(p.frontmatter);
+          return (
+            <ProjectPreview
+              description={p.frontmatter.description ?? ""}
+              minutesToRead={p.frontmatter.minutesRead}
+              projectDate={p.frontmatter.date}
+              tags={p.frontmatter.tags ?? []}
+              author={p.frontmatter.author}
+              projectName={p.frontmatter.title}
+            />
+          );
+        })
+      }
+    </section>
+  </main>
+</Layout>
