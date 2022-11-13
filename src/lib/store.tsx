@@ -7,5 +7,5 @@ type MainStoreType = {
 
 export const mainStore = atom<MainStoreType>({
   search: "",
-  modalOpen: true
+  modalOpen: false
 });

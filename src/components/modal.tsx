@@ -17,7 +17,7 @@ export default function Modal() {
                         ...mainStore.get(),
                         modalOpen: false
                     })}
-                    className="btn btn-ghost btn-circle border absolute right-0 top-0 m-4">
+                    className="btn btn-ghost btn-circle border absolute right-0 top-0 p-4">
                         <svg
 
                         xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
