@@ -1,5 +1,8 @@
 ---
+import Modal from "../components/modal";
 import Navbar from "../components/navbar";
+import "../css/base.css";
+
 
 export interface Props {
   title: string;
@@ -9,7 +12,7 @@ const { title } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="en" data-theme="dark" class="w-[100vw]">
+<html lang="en" data-theme="coffe" class="w-[100vw]">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -18,7 +21,8 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body class="flex flex-col box-border">
-    <Navbar />
+    <Modal client:idle/>
+    <Navbar client:idle/>
     <div class="flex flex-1 flex-col py-6 items-center">
       <slot />
     </div>

@@ -1,3 +1,6 @@
+import toast from "react-hot-toast";
+import { mainStore } from "../lib/store";
+
 export default function Navbar() {
   return (
     <>
@@ -8,6 +11,13 @@ export default function Navbar() {
       >
         <div className="flex items-center justify-between w-full gap-2">
          <svg
+            onClick={() => {
+              mainStore.set({
+                ...mainStore.get(),
+                modalOpen: !mainStore.get().modalOpen
+              })
+              toast('toggled!')
+            }}
             id="btn-toggle-wide"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
