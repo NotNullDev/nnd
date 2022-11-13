@@ -28,13 +28,13 @@ export default function Modal() {
                     <div className="flex gap-3 items-center justify-center w-full h-full">
                     <nav className="w-full h-full  flex flex-col items-start justify-center p-4">
 
-                        <a>
+                        <a href="/">
                             <button className="btn btn-ghost">Home</button>
                         </a>
-                        <a>
+                        <a href="/blog">
                             <button className="btn btn-ghost">Blog</button>
                         </a>
-                        <a>
+                        <a href="/about">
                             <button className="btn btn-ghost">About</button>
                         </a>
                         </nav>
