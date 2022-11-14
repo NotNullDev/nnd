@@ -7,10 +7,11 @@ export default function Navbar() {
       <header
         className=" sticky top-0 left-0 shadow-md w-full z-10 bg-base-100
         md:flex
+        md:items-center
         "
       >
-        <div className="flex items-center justify-between w-full gap-2 p-2">
-         <button className="btn btn-square btn-ghost" onClick={() => {
+        <div className="flex items-center justify-between w-full gap-2 p-2 md:justify-start">
+         <button className="btn btn-square btn-ghost md:hidden" onClick={() => {
               mainStore.set({
                 ...mainStore.get(),
                 modalOpen: !mainStore.get().modalOpen
@@ -42,7 +43,7 @@ export default function Navbar() {
             </a>
           </div>
           <a href="https://github.com/NotNullDev/nnd"
-          className="cursor-pointer hover:scale-125 hover:invert transition-all duration-500 grid items-center mr-3"
+            className="cursor-pointer hover:scale-125 hover:invert transition-all duration-500 grid items-center mr-3 md:hidden"
           target="_blank">
           <svg
             width="2em"
@@ -83,7 +84,7 @@ export default function Navbar() {
             About
           </a>
           <a href="https://github.com/NotNullDev/nnd"
-          className="cursor-pointer hover:scale-125 hover:invert transition-all duration-500 grid items-center"
+          className="cursor-pointer hover:scale-125 hover:invert transition-all duration-500 grid items-center md:hidden"
           target="_blank">
           <svg
             width="2em"
