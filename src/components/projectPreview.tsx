@@ -32,7 +32,7 @@ export default function ProjectPreview({
       <div className="whitespace-pre-wrap mx-auto line-clamp-5 my-2">
         {description}
       </div>
-      <div className="flex gap-1 justify-end">
+      <div className="flex gap-1 justify-end flex-wrap">
         {tags.map((tag) => {
           return (
             <div className=" hover:-translate-y-1 text-sm shadow-xl bg-gradient-to-br from-base-200 px-2 py-1 rounded-md cursor-pointer hover:scale-110 transition-all">
