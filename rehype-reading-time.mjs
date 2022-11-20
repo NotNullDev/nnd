@@ -3,7 +3,6 @@ import getReadingTime from "reading-time";
 
 export default function remarkReadingTime() {
   return function (tree, { data }) {
-    console.log("a");
     const textOnPage = toString(tree);
     const readingTime = getReadingTime(textOnPage);
 

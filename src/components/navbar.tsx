@@ -1,15 +1,26 @@
+import { useEffect } from "react";
 import toast from "react-hot-toast";
 import { mainStore } from "../lib/store";
 
 export default function Navbar() {
+
+  useEffect(() => {
+    window.onerror = (evt,src,l,c,e) => {
+      console.log("error",evt,src,l,c,e);
+    }
+  }, [])
+
   return (
     <>
       <header
-        className=" sticky top-0 left-0 shadow-md w-full z-10 bg-base-100
+        className="sticky top-0 left-0 shadow-md w-full z-10 bg-base-100
         md:flex
         md:items-center
+        relative
+        px-6
         "
       >
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-sky-500 text-3xl italic">PAGE IS UNDER DEVELOPMENT</div>
         <div className="flex items-center justify-between w-full gap-2 p-2 md:justify-start">
          <button className="btn btn-square btn-ghost md:hidden" onClick={() => {
               mainStore.set({
@@ -62,8 +73,8 @@ export default function Navbar() {
         <nav
           id="nav-wide"
           className="gap-1 hidden
-        md:flex
-        "
+            md:flex
+          "
         >
           {/* <input
             className="input input-bordered"

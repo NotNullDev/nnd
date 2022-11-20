@@ -4,8 +4,6 @@ import Layout from "./Layout.astro";
 
 const { title, Content, headings } = Astro.props;
 const props = Astro.props;
-console.log(props);
-console.log(headings);
 ---
 
 <Layout title={title}>
@@ -45,7 +43,7 @@ console.log(headings);
 
     <nav
       id="markdown-headings"
-      class="flex flex-col flex-1 p-10 items-end relative h-full hidden"
+      class="flex-col p-10 items-end relative h-full hidden break-2:flex"
     >
       <div
         class="fixed right-0 mr-[5%] top-[1/5] flex flex-col p-6 h-full w-[300px] space-y-1 font-bold border-l border-l-base-300 max-h-[70vh]"
@@ -57,7 +55,6 @@ console.log(headings);
         <div class="flex flex-col pt-2 overflow-y-auto">
           {
             headings.map((h) => {
-              console.log(h);
               return (
                 <a
                   class={`m-1 pl-${h.depth} hover:brightness-150`}

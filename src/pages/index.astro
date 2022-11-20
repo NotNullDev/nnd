@@ -47,9 +47,6 @@ const projects = await Astro.glob("../pages/projects/*.md");
       >
         {
           projects.map((p) => {
-            console.log(p.rawContent());
-            console.log(p.compiledContent());
-            console.log(p.frontmatter);
             return (
               <ProjectPreview
                 description={p.frontmatter.description ?? ""}

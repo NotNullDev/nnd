@@ -20,7 +20,8 @@ export default function ProjectPreview({
     <a
       className="
       p-4 shadow-xl gap-2 flex flex-col hover:scale-110 transition-all
-       max-w-[400px]
+      max-w-[400px]
+      h-[300px]
       "
       href={`/projects/${slug}`}
     >
