@@ -1,9 +1,7 @@
-import { useStore } from "@nanostores/react"
-import { mainStore } from "../lib/store"
+import { mainStore } from "../lib/store";
 
 export default function Modal() {
-
-    const {modalOpen} = useStore(mainStore)
+    const modalOpen = mainStore(state => state.modalOpen);
 
     return (
         <>
@@ -13,15 +11,16 @@ export default function Modal() {
                 overflow-y-hidden
                 fixed
                 ">
-                    <button onClick={() => mainStore.set({
-                        ...mainStore.get(),
-                        modalOpen: false
-                    })}
+                    <button onClick={() => () => {
+                        mainStore.setState(state => {
+                            state.modalOpen = true;
+                        })
+                    }}
                     className="btn btn-ghost btn-circle border absolute right-0 top-0 p-4">
                         <svg
 
                         xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                         </svg>
                     </button>
 

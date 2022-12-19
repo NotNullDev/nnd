@@ -13,19 +13,20 @@ export default function Navbar() {
   return (
     <>
       <header
-        className="sticky top-0 left-0 shadow-md w-full z-10 bg-base-100
+        className="sticky top-0 left-0 w-full z-10 bg-base-100
         md:flex
         md:items-center
         relative
         px-6
+        py-3
         "
       >
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-sky-500 text-3xl italic">PAGE IS UNDER DEVELOPMENT</div>
+        <div className="flex  justify-between w-full container mx-auto items-center">
         <div className="flex items-center justify-between w-full gap-2 p-2 md:justify-start">
          <button className="btn btn-square btn-ghost md:hidden" onClick={() => {
-              mainStore.set({
-                ...mainStore.get(),
-                modalOpen: !mainStore.get().modalOpen
+              mainStore.setState(state=> {
+                state.modalOpen = !state.modalOpen;
               })
               toast('toggled!')
             }}>
@@ -76,15 +77,6 @@ export default function Navbar() {
             md:flex
           "
         >
-          {/* <input
-            className="input input-bordered"
-            onChange={(e) => {
-              toast("hi!");
-              mainStore.set({
-                search: e.currentTarget.value,
-              });
-            }}
-          /> */}
           <a className="btn btn-ghost" href="/">
             Home
           </a>
@@ -110,6 +102,7 @@ export default function Navbar() {
           </svg>
           </a>
         </nav>
+        </div>
       </header>
     </>
   );

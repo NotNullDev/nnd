@@ -36,7 +36,7 @@ export default function ProjectPreview({
       <div className="flex gap-1 justify-end flex-wrap">
         {tags.map((tag) => {
           return (
-            <div className=" hover:-translate-y-1 text-sm shadow-xl bg-gradient-to-br from-base-200 px-2 py-1 rounded-md cursor-pointer hover:scale-110 transition-all">
+            <div className=" hover:-translate-y-1 text-sm shadow-xl bg-gradient-to-br from-base-200 px-2 py-1 rounded-md cursor-pointer hover:scale-110 transition-all" key={tag}>
               {tag}
             </div>
           );
