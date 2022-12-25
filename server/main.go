@@ -11,12 +11,20 @@ func main() {
 	e.Use(middleware.Recover())
 	e.Use(middleware.Gzip())
 
-	e.Use(middleware.StaticWithConfig(middleware.StaticConfig{
-		HTML5:  true,
-		Index:  "index.html",
-		Browse: false,
-		Root:   "dist",
-	}))
+	e.Static("/", "dist")
 
-	e.Start(":3000")
+	e.HTTPErrorHandler = func(err error, c echo.Context) {
+		c.Logger().Error(err)
+		err = c.File("dist/404.html")
+
+		if err != nil {
+			c.Logger().Error(err)
+		}
+	}
+
+	err := e.Start(":3000")
+
+	if err != nil {
+		panic(err)
+	}
 }
