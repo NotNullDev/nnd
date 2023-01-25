@@ -19,6 +19,7 @@ export default function Navbar() {
         px-12
         py-5
         container
+        mx-auto
         "
       >
         {/* <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-sky-500 text-3xl italic">PAGE IS UNDER DEVELOPMENT</div> */}
