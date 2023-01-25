@@ -13,12 +13,12 @@ export default function Navbar() {
   return (
     <>
       <header
-        className="sticky top-0 left-0 w-full z-10 bg-base-100
+        className="sticky top-0 left-0 z-10 bg-base-100
         md:flex
         md:items-center
-        relative
-        px-6
-        py-3
+        px-12
+        py-5
+        container
         "
       >
         {/* <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-sky-500 text-3xl italic">PAGE IS UNDER DEVELOPMENT</div> */}

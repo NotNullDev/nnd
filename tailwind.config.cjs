@@ -9,9 +9,13 @@ module.exports = {
       },
     },
   },
+  corePlugins: {
+    aspectRatio: false,
+  },
   plugins: [
     require("daisyui"),
     require("@tailwindcss/typography"),
     require("@tailwindcss/line-clamp"),
+    require('@tailwindcss/aspect-ratio'),
   ],
 };

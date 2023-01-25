@@ -1,4 +1,14 @@
-# About me
+---
+layout: ../layouts/ProjectLayout.astro
+author: NotNullDev
+title: >
+    About me
+date: 19.11.2022
+slug: about
+
+---
+
+# What do I do?
 
 I am Java Backend Developer professionally...
 
@@ -36,6 +46,8 @@ I am constantly looking for new technologies that can me help improve quality or
 But deeply in my heart I fill that I must know the basics of the technology I am using.
 Thats where Go comes in. It helps me understand how the things work under the hood. Simply by trying to rebuild simple version of the technology I am using.
 
+---
+
 # Opinions
 
 And that's also why I am not a big fan of Spring. It is a great framework, but it hides too much from the developer.
@@ -53,9 +65,14 @@ I am not (yet) a good web designer, I still need to utilize good component libra
 
 I am keeping eye on svelte, and in the future I may switch to it for personal projects. But for now I am happy with React.
 
+---
+
+
 # Ending thoughts
 
 For now my main focus is to expand portfolio, but in the future I wan't to extend the website with blogs with knowledge I gain from my programming journey.
+
+---
 
 # Disclaimer
 
