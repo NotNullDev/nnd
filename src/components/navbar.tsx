@@ -21,7 +21,7 @@ export default function Navbar() {
         py-3
         "
       >
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-sky-500 text-3xl italic">PAGE IS UNDER DEVELOPMENT</div>
+        {/* <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-sky-500 text-3xl italic">PAGE IS UNDER DEVELOPMENT</div> */}
         <div className="flex  justify-between w-full container mx-auto items-center">
         <div className="flex items-center justify-between w-full gap-2 p-2 md:justify-start">
          <button className="btn btn-square btn-ghost md:hidden" onClick={() => {
@@ -50,6 +50,13 @@ export default function Navbar() {
             <a
               href="/"
               className="btn btn-ghost text-xl font-bold italic bg-gradient-to-br from-indigo-600 to-orange-500 bg-clip-text text-opacity-0 text-transparent"
+              style={{
+                // some weird bug on chrome
+                WebkitBackgroundClip: "text",
+                // @ts-ignore
+                "-webkit-background-clip": "text",
+                "-webkit-text-fill-color": "transparent"
+              }}
             >
               NotNullDev
             </a>
