@@ -19,7 +19,7 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class="flex flex-col box-border min-h-screen">
+  <body class="flex flex-col box-border min-h-screen scroll-smooth">
     <Modal client:idle/>
     <Navbar client:idle/>
     <div class="flex flex-1 flex-col py-6 items-center container mx-auto">
