@@ -7,7 +7,7 @@ type SingleProjectPreviewProps = {
 
 const SingleProjectPreview = ({description, imageUrl, title, linkUrl}: SingleProjectPreviewProps) => {
     return (
-      <div className="flex flex-col bg-base-100 shadow-xl w-1/3 h-[420px] hover:scale-105 hover:shadow-indigo-600 transition-all duration-200 group rounded-xl">
+      <div className="flex flex-col bg-base-100 shadow-xl w-[350px] h-[420px] hover:scale-105 hover:shadow-indigo-600 transition-all duration-200 group rounded-xl">
       <figure className="aspect-w-12 aspect-h-8 rounded-xl">
         <img src={imageUrl} alt={title} className="rounded-xl" />
         </figure>

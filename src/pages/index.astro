@@ -1,4 +1,5 @@
 ---
+import CommingSoonProjectPreview from "../components/commingSoonProjectPreview";
 import SingleProjectPreview from "../components/singleProjectPreview";
 import Layout from "../layouts/Layout.astro";
 
@@ -6,7 +7,7 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout title="NotNullDev.com" >
     <div class="flex flex-1  gap-6 ">
-    <div class="mx-auto flex gap-8 justify-center">
+    <div class="mx-auto flex gap-8 justify-center flex-wrap">
         <SingleProjectPreview
         title="E-commerce"
         description="Simple e-commerce site built with Next.js, prisma, trpc, tailwind, nextauth, stripe and daisyui."
@@ -15,10 +16,23 @@ import Layout from "../layouts/Layout.astro";
         />
     <SingleProjectPreview
         title="Chat"
-        description="Most basic chat using svelte, tailwindcss, daisyui and pocketbase."
+        description="Dead simple chat using svelte, tailwindcss, daisyui and pocketbase."
         imageUrl="/svelte-pocketbase-chat.png"
         linkUrl="https://svelte-chat.notnulldev.com/"
         />
+
+    <CommingSoonProjectPreview
+    title="Nano CI/CD"
+    description="Simple CI/CD built with Next.js, mui, tailwind and Go on the backend."
+    imageUrl="/nano-ui.png"
+    />
+
+    <CommingSoonProjectPreview
+    title="Nano management"
+    description="Application to report time for teams build with Next.js, Mantine, tailwind and pocketbase on the backend."
+    imageUrl="/nano-management.png"
+/>
+
     </div>
 
     </div>
