@@ -110,6 +110,9 @@ export default function Navbar() {
         </g>
       </svg>
         </a>
+
+      <div className="ml-1 border-r border-r-pink-800 h-4"></div>
+
       <a href="https://www.linkedin.com/in/notnulldev" target="_blank">
         <svg width="24" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" className="cursor-pointer hover:scale-125 transition-all duration-500 fill-current">
           <rect x="2" y="2" width="28" height="28" rx="14" fill="none"/>
