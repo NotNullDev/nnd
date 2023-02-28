@@ -9,7 +9,7 @@ const SingleProjectPreview = ({description, imageUrl, title, linkUrl}: SinglePro
     return (
       <div className="flex flex-col bg-base-100 shadow-xl w-[350px] h-[420px] hover:scale-105 hover:shadow-indigo-600 transition-all duration-200 group rounded-xl">
       <figure className="aspect-w-12 aspect-h-8 rounded-xl">
-        <img src={imageUrl} alt={title} className="rounded-xl" loading="lazy"  />
+        <img src={imageUrl} alt={title} className="rounded-xl bg-base-100 text-base-100 w-full h-full" loading="lazy"  />
       </figure>
       <div className="p-8 flex flex-col gap-3  flex-1">
         <h2 className="text-xl font-bold flex">{title}</h2>
