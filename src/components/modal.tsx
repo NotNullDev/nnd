@@ -11,39 +11,32 @@ export default function Modal() {
                 overflow-y-hidden
                 fixed
                 ">
-                    <button onClick={() => () => {
+                    <button onClick={() => {
                         mainStore.setState(state => {
-                            state.modalOpen = true;
+                            state.modalOpen = false;
                         })
                     }}
-                    className="btn btn-ghost btn-circle border absolute right-0 top-0 p-4">
-                        <svg
-
-                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                        </svg>
+                    className="absolute top-0 right-0 m-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="hover:stroke-gray-500 active:scale-90" width="48" height="48" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M3 3m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z"></path>
+                        <path d="M10 10l4 4m0 -4l-4 4"></path>
+                    </svg>
                     </button>
 
-                    <div className="flex gap-3 items-center justify-center w-full h-full">
-                    <nav className="w-full h-full  flex flex-col items-start justify-center p-4">
 
-                        <a href="/">
-                            <button className="btn btn-ghost">Home</button>
+                    <nav className="w-full h-full items-center flex flex-col justify-center p-4">
+                        <a  href="/">
+                            <button className="btn btn-ghost btn-lg">Home</button>
                         </a>
-                        <a href="/blog">
-                            <button className="btn btn-ghost">Blog</button>
+                        <a  href="/blog">
+                            <button className="btn btn-ghost btn-lg">Blog</button>
                         </a>
-                        <a href="/about">
-                            <button className="btn btn-ghost">About</button>
+                        <a  href="/about">
+                            <button className="btn btn-ghost btn-lg">About</button>
                         </a>
-                        </nav>
-                        <div>
-                        <form className="flex flex-col gap-1">
-                            <input className="input  input-bordered" type="text" placeholder="search..." />
-                            <button className="btn btn-sm glass">Search</button>
-                        </form>
-                        </div>
-                    </div>
+                    </nav>
+
                 </div>
             )
         }
