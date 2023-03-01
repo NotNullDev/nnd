@@ -14,7 +14,7 @@ description: |
 
 ---
 
-<!-- # Setup
+# Setup
 
 1. Navigate to [Google Cloud Platform](https://console.cloud.google.com/)
 2. Create new project
@@ -52,7 +52,7 @@ And the response:
     ?state=lq2HzWMa9A8yZzHM7iGa1pAKmDkGop
     &code=4%2F0AfgeXvuXOiE4X1BIG6SyFKmB9Fl-NqCr5eNW6QGDsbUbgupF1PnbvchExpRMYrXsZZYnMg
     &scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid
-    &authuser=0 -->
+    &authuser=0
     &prompt=consent
 
 > To be continued...
