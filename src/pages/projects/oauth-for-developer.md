@@ -32,7 +32,7 @@ description: |
 
 ## The Google's OAuth flow
 
-![Google's OAuth flow](/google-oath-flow.png)
+![Google's OAuth flow](https://cdn.notnulldev.com/google-oath-flow.webp)
 
 
 Let's invesigate google login process url:

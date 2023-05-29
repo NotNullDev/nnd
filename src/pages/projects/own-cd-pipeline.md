@@ -37,6 +37,6 @@ Our goals:
 4. Docker - for our containers
 5. Docker compose - for our containers orchestration
 
-![haha](/logs.png)
+![haha](https://cdn.notnulldev.com/logs.webp)
 
 > To be continued...

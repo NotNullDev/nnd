@@ -12,6 +12,24 @@ module.exports = {
   corePlugins: {
     aspectRatio: false,
   },
+  daisyui: {
+    themes: [
+      {
+        shades: {
+          "primary": "#e5e7eb",
+          "secondary": "#152747",
+          "accent": "#581c87",
+          "neutral": "#111827",
+          "base-100": "#111827",
+          "info": "#0369a1",
+          "success": "#15803d",
+          "warning": "#eab308",
+          "error": "#be123c",
+        },
+      },
+      "dark"
+    ],
+  },
   plugins: [
     require("daisyui"),
     require("@tailwindcss/typography"),

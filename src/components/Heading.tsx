@@ -5,7 +5,7 @@ export type HeadingProps = {
 export const Heading = ({heading}: HeadingProps) => {
     return (
          <div
-        className={`m-1 pl-${heading.depth} hover:brightness-150 `}
+        className={`m-1 pl-${heading.depth} hover:brightness-150 cursor-pointer`}
         onClick={(() => {
             const s = document.querySelector("#" + heading.slug)
             s.scrollIntoView({
